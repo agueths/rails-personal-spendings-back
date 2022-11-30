@@ -69,6 +69,7 @@ GEM
     ast (2.4.2)
     backport (1.2.0)
     benchmark (0.2.0)
+    bcrypt (3.1.18)
     bootsnap (1.15.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -94,6 +95,7 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     kwalify (0.7.2)
+    jwt (2.5.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -226,8 +228,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   debug
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
