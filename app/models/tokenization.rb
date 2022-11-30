@@ -2,10 +2,10 @@ class Tokenization
   include ActiveModel::Model
 
   def self.encode(payload)
-    raise NotImplementedError, "#{self.class} has not implemented method encode '#{__method__}'"
+    JWT.encode(payload, Rails.application.credentials[:jwt_secret_key])
   end
 
   def self.decode(token)
-    raise NotImplementedError, "#{self.class} has not implemented method encode '#{__method__}'"
+    JWT.decode(token, Rails.application.credentials[:jwt_secret_key], true, algorithm: 'HS256')[0]
   end
 end
